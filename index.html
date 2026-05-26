@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Mark Lawrence S. Tatel - BSIT student, C# developer, and musician from Valenzuela City, Philippines.">
+    <meta name="keywords" content="Mark Lawrence Tatel, portfolio, C# developer, BSIT, Valenzuela, web developer">
+    <meta property="og:title" content="Mark Lawrence S. Tatel | Portfolio">
+    <meta property="og:description" content="BSIT student building desktop apps with C# and exploring web development.">
+    <meta property="og:image" content="images/IMG20240529084241-removebg-preview.png">
+    <meta property="og:url" content="https://yourdomain.com">
+    <title>Mark Lawrence S. Tatel Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="MyFavicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><img src="images/MyFavicon.png" alt="Mark Lawrence Logo"></span>
+                <span>Mark</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="resume.html">CV</a></li>
+            </ul>
+            <div class="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <p class="hero-greeting">Welcome to my world</p>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="highlight">Mark Lawrence S. Tatel</span>
+                </h1>
+                <p class="hero-subtitle">BSIT Student • Web Developer • Database Manager</p>
+                <p class="hero-description">
+                    Building desktop applications with C# and exploring how data management solve real problems. 
+                <div class="hero-cta">
+                    <a href="about.html" class="btn btn-primary">
+                        Discover My Story
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="contact.html" class="btn btn-outline">Get in Touch</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-wrapper">
+                    <div class="hero-image">
+                        <img src="images/IMG20240529084241-removebg-preview.png" alt="Mark Lawrence S. Tatel">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Reel Section -->
+    <section class="demo-reel-section">
+        <div class="container">
+            <h2 class="section-title">My Demo Reel</h2>
+            <div class="video-wrapper">
+                <video width="100%" height="auto" controls allowfullscreen>
+                    <source src="lv_0_20260408052556.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <p class="reel-description">1 minute and 30 seconds of my demo reel</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-nav">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="skills.html">Skills</a>
+                    <a href="education.html">Education</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="resume.html">CV</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/181NbdAtwJ/" aria-label="Facebook profile" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/k_ramm1?igsh=MTRteGNzbmJseWlqcw==" aria-label="Instagram profile" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@markieetot_" aria-label="TikTok profile" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://t.me/tatsillg" aria-label="Telegram profile" target="_blank"><i class="fab fa-telegram"></i></a>
+                </div>
+                <p class="copyright">&copy;2026 Mark Lawrence S. Tatel. Crafted with passion.</p>
+                <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                    <i class="fas fa-arrow-up"></i> Back to Top
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // Close menu when clicking links
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.2
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.featured-project-card, .learning-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(el);
+        });
+
+        document.querySelectorAll('.animate-in').forEach(el => {
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+        });
+    </script>
+</body>
+</html>
