@@ -1420,9 +1420,12 @@ h1, h2, h3, h4 {
     font-weight: 600;
 }
 
+
 /* ===================================
-   CONTACT PAGE
+   CONTACT PAGE - MOBILE FIXES
    =================================== */
+
+/* Base contact styles (already in your CSS) */
 .contact-section {
     padding: 80px 0;
     background: var(--bg-primary);
@@ -1680,6 +1683,303 @@ h1, h2, h3, h4 {
 .form-group.floating textarea:focus ~ i {
     color: var(--accent-primary);
 }
+
+/* ===================================
+   CONTACT PAGE - MOBILE MEDIA QUERIES
+   =================================== */
+
+/* Tablet breakpoint (768px - 1024px) */
+@media (max-width: 1024px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        max-width: 700px;
+    }
+
+    .contact-info-panel {
+        padding: 2.5rem;
+        border-radius: 24px;
+    }
+
+    .contact-form-panel {
+        padding: 2.5rem;
+        border-radius: 24px;
+    }
+
+    .open-for-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* Mobile breakpoint (up to 768px) */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 40px 0;
+    }
+
+    .contact-header {
+        padding: 120px 0 60px;
+    }
+
+    .contact-header .page-title {
+        font-size: 2.2rem;
+    }
+
+    .contact-header .page-subtitle {
+        font-size: 1rem;
+    }
+
+    .open-for-section {
+        margin-bottom: 40px;
+    }
+
+    .open-for-section .section-heading {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .open-for-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .open-for-card {
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+
+    .open-for-card i {
+        font-size: 2rem;
+    }
+
+    .open-for-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0;
+    }
+
+    .contact-info-panel {
+        padding: 1.5rem;
+        border-radius: 20px;
+        gap: 1.5rem;
+    }
+
+    .panel-title {
+        font-size: 1.6rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .panel-desc {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-methods {
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-method {
+        gap: 1rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .method-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        font-size: 1.2rem;
+    }
+
+    .method-details h3 {
+        font-size: 1rem;
+    }
+
+    .method-details a,
+    .method-details p {
+        font-size: 0.9rem;
+        word-break: break-word;
+    }
+
+    .social-connect h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .social-icons-large {
+        gap: 0.8rem;
+        flex-wrap: wrap;
+    }
+
+    .social-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 1.1rem;
+    }
+
+    .btn-resume {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+
+    .contact-form-panel {
+        padding: 1.5rem;
+        border-radius: 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .form-group.floating input,
+    .form-group.floating textarea {
+        padding: 0.9rem 0.9rem 0.9rem 2.5rem;
+        font-size: 16px; /* Prevents iOS zoom on focus */
+        border-radius: 10px;
+    }
+
+    .form-group.floating textarea {
+        min-height: 100px;
+    }
+
+    .form-group.floating label {
+        left: 2.5rem;
+        top: 0.9rem;
+        font-size: 0.95rem;
+    }
+
+    .form-group.floating i {
+        left: 0.8rem;
+        top: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .form-group.floating input:focus ~ label,
+    .form-group.floating textarea:focus ~ label,
+    .form-group.floating input:not(:placeholder-shown) ~ label,
+    .form-group.floating textarea:not(:placeholder-shown) ~ label {
+        top: -0.4rem;
+        left: 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .btn-submit {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Small mobile breakpoint (up to 480px) */
+@media (max-width: 480px) {
+    .contact-header {
+        padding: 100px 0 50px;
+    }
+
+    .contact-header .page-title {
+        font-size: 1.8rem;
+    }
+
+    .contact-header .page-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .open-for-section .section-heading {
+        font-size: 1.5rem;
+    }
+
+    .open-for-card {
+        padding: 1.2rem;
+    }
+
+    .open-for-card i {
+        font-size: 1.8rem;
+    }
+
+    .open-for-card h3 {
+        font-size: 1rem;
+    }
+
+    .open-for-card p {
+        font-size: 0.85rem;
+    }
+
+    .contact-info-panel {
+        padding: 1.2rem;
+        border-radius: 16px;
+    }
+
+    .panel-title {
+        font-size: 1.4rem;
+    }
+
+    .panel-desc {
+        font-size: 0.9rem;
+    }
+
+    .method-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 1.1rem;
+    }
+
+    .method-details h3 {
+        font-size: 0.95rem;
+    }
+
+    .method-details a,
+    .method-details p {
+        font-size: 0.85rem;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .contact-form-panel {
+        padding: 1.2rem;
+        border-radius: 16px;
+    }
+
+    .form-group.floating input,
+    .form-group.floating textarea {
+        padding: 0.8rem 0.8rem 0.8rem 2.2rem;
+        font-size: 16px;
+    }
+
+    .form-group.floating label {
+        left: 2.2rem;
+        top: 0.8rem;
+    }
+
+    .form-group.floating i {
+        left: 0.7rem;
+        top: 0.9rem;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .open-for-card:hover {
+        transform: none;
+    }
+
+    .social-icon:hover {
+        transform: none;
+    }
+
+    .contact-method {
+        -webkit-tap-highlight-color: transparent;
+    }
+}
+
 
 /* ===================================
    CV / RESUME PAGE
